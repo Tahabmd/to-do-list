@@ -3,7 +3,7 @@ setInterval(levels, 10);
 let button = document.querySelector("button");
 let article = document.querySelector("#article-input");
 let addingArticle = document.querySelector("#adding-list");
-let rightPanel = document.querySelector(".right-panel");
+let rightPanelDiv = document.querySelector(".right-panel-div");
 let main = document.querySelector("main");
 let panelBtn = document.querySelector("#info-panel-button");
 let panelDiv = document.getElementById("panel");
@@ -27,7 +27,7 @@ panelBtn.addEventListener("click", () => {
   panelDiv.classList.toggle("show-the-div-panel");
 });
 button.addEventListener("click", addToList);
-rightPanel.addEventListener("dblclick", (e) => {
+rightPanelDiv.addEventListener("dblclick", (e) => {
   if (e.target.localName === "section") {
     let targetedSection = e.target;
     addingArticle.appendChild(targetedSection);
@@ -41,7 +41,7 @@ main.addEventListener("dblclick", (e) => {
   // adding dblclick to remove the section to the right panel
   if (e.target.localName === "section") {
     let targetedSection = e.target;
-    rightPanel.appendChild(targetedSection);
+    rightPanelDiv.appendChild(targetedSection);
     let task = targetedSection.firstElementChild.innerHTML;
     let indexOfTask = mainTasks.indexOf(task);
     removeTaskFromMain(indexOfTask);
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     section.innerHTML = `
     <h3>${encodeHTML(task)}</h3>
     <i class="fa-solid fa-trash-can"></i>`;
-    rightPanel.appendChild(section);
+    rightPanelDiv.appendChild(section);
   }
 });
 
@@ -126,13 +126,16 @@ function levels() {
     7: "you killing it",
     8: "Fantastic!",
   };
-  let count = rightPanel.childElementCount;
-  let h2 = rightPanel.firstElementChild;
+  let count = rightPanelDiv.childElementCount;
+  let h2 = rightPanelDiv.previousElementSibling;
 
   for (let number in lvl) {
     if (count == number) {
       h2.innerHTML = lvl[number];
     }
+  }
+  if (count > 8) {
+    h2.innerHTML = lvl[8];
   }
 }
 function saveTasksFromMain(input) {

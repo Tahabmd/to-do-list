@@ -134,7 +134,22 @@ i:hover {
     padding: 10px 20px;
 }
 
+.right-panel {
+    /* padding-top: 114px; */
+    position: relative;
+}
+
 .right-panel h2 {
+    /* z-index: 10; */
+    width: inherit;
+    /* top: 111px; */
+    padding: 9px 0px;
+
     font-size: 30px;
     color: whitesmoke;
+}
+
+.right-panel-div {
+    overflow-y: auto;
+    max-height: 594px;
 }
