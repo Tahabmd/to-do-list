@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="./javaScript.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <h1><span>&#60;</span> ToDo List <span>&#62;</span> </h1>
+        <article id="article-input">
+            <input type="text" placeholder="Tilte...">
+            <button>ADD</button>
+        </article>
+        <article id="adding-list"></article>
+    </main>
+    <article class="info-panel">
+        <button id="info-panel-button">more...</button>
+        <div id="panel">
+            <p>&#62; double click on left panel tasks will transfer the task to right panel.</p>
+            <p>&#62; double click on right panel tasks will transfer the task to left panel.</p>
+            <p>&#62; you can delete the task by clicking on trash can.</p>
+        </div>
+    </article>
+
+    <article class="right-panel">
+        <h2>you've done nothing...</h2>
+    </article>
+    <script src="https://kit.fontawesome.com/01e18c3fee.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
