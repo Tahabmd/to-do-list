@@ -117,16 +117,17 @@ function encodeHTML(str) {
 function levels() {
   // level of tasks
   let lvl = {
-    1: "you've done nothing...",
-    2: "Here we go!",
-    3: "keep going",
-    4: "the day is yours",
-    5: "Great!",
-    6: "Good job!",
-    7: "you killing it",
-    8: "Fantastic!",
+    0: "you've done nothing...",
+    1: "Here we go!",
+    2: "keep going",
+    3: "the day is yours",
+    4: "Great!",
+    5: "Good job!",
+    6: "you killing it",
+    7: "Fantastic!",
+    8: "be proud of yourself",
   };
-  let count = rightPanelDiv.childElementCount + 1;
+  let count = rightPanelDiv.childElementCount;
   let h2 = rightPanelDiv.previousElementSibling;
 
   for (let number in lvl) {
