@@ -126,7 +126,7 @@ function levels() {
     7: "you killing it",
     8: "Fantastic!",
   };
-  let count = rightPanelDiv.childElementCount;
+  let count = rightPanelDiv.childElementCount + 1;
   let h2 = rightPanelDiv.previousElementSibling;
 
   for (let number in lvl) {
